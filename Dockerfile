@@ -18,7 +18,6 @@ RUN apt install -y ffmpeg
 # Install python packages
 RUN pip3 install ivrit[all]==0.1.8 torch==2.4.1 huggingface-hub==0.36.0 runpod
 
-RUN python3 -c 'import faster_whisper; m = faster_whisper.WhisperModel("ivrit-ai/yi-whisper-large-v3")'
 RUN python3 -c 'import faster_whisper; m = faster_whisper.WhisperModel("ivrit-ai/yi-whisper-large-v3-ct2")'
 RUN python3 -c 'import faster_whisper; m = faster_whisper.WhisperModel("ivrit-ai/yi-whisper-large-v3-turbo-ct2")'
 RUN python3 -c 'import faster_whisper; m = faster_whisper.WhisperModel("large-v3-turbo")'
